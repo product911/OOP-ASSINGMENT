@@ -1,2 +1,0 @@
-# OOP-ASSINGMENT
-OOP Assignments
