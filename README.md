@@ -225,7 +225,7 @@ void Favorite::showFavorite() const
 ### Inheritance (5 Relationships)
 
 | Derived | Base    | Reason |
-
+|---|---|---|
 | Seller  | User    | Seller is a user with a shop and listings |
 | Buyer   | User    | Buyer is a user with favorites and a budget |
 | Admin   | User    | Admin is a user with approval authority |
@@ -235,7 +235,7 @@ void Favorite::showFavorite() const
 ### Abstraction (4 Abstract Classes)
 
 | Interface   | Pure Virtual                      | Used |
-
+|---|---|---|
 | IListable   | displayDetails()                  | Vehicle → Car, Bike |
 | ISearchable | matchesSearch()                   | Vehicle → Car, Bike |
 | IMessagable | sendMessage()                     | Buyer, Seller |
@@ -247,14 +247,14 @@ void Favorite::showFavorite() const
 - **Overloading:** `matchesSearch()` in Car has two versions for overloading — one takes string, one takes a price
 
 ### Operator Overloading
-
+|---|---|---|
 | Operator | Class   | Purpose |
 | ==       | Vehicle | Checks if two vehicles are the same (brand + model + price) |
 | +        | Vehicle | Returns combined mileage of two vehicles |
 | ==       | Listing | Checks if two listings point to the same vehicle ID |
 
 ### Friend Functions
-
+|---|---|---|
 | Function          | Class   | Reason |
 | printUserInfo()   | User    | Access private phone/email for seller contact display |
 | logMessage()      | Message | Access private sender/receiver/text for admin logging |
