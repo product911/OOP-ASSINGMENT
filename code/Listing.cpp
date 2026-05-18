@@ -75,8 +75,10 @@ int Listing::getTotalCreated()
 //== operator - compare listings by vehicle ID
 bool Listing::operator==(const Listing &other) const
 {
-    // FIX: Compare by listing code instead of vehicle ID to avoid false duplicates
-    return this->listingCode == other.listingCode;
+    // Compare by vehicle ID to detect actual duplicate vehicles
+    if (vehicle1 == nullptr || other.vehicle1 == nullptr)
+        return false;
+    return this->vehicle1->getId() == other.vehicle1->getId();
 }
 
 // Friend function: gives Admin full read access to private listing - Admin audit requires rejected/approved status & vehicle details
